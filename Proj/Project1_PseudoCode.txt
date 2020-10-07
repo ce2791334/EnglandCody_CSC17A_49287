@@ -1,0 +1,38 @@
+Mao Game psuedo psuedocode
+
+SETUP
+12 cards each 
+
+RULES 
+	Basic:
+Same suit or number
+Get rid of all cars to win
+
+	Special:
+start with 5
+		1. If you play a face card
+		2. If same number is played
+		3. Winning
+		4. If a lower number is played
+		5. If a sandwhich occurs
+		
+	Add Options:
+	1. Ace played
+	2. Switching colors
+	3. If a run of 3 is played
+	
+GAMEPLAY
+1. Get hand
+2. Display new random card after searching each hand
+3. User picks one of their cardss to play
+4. Display number menu for rule
+	Change in hand (up or down depending on error)
+4. AI plays (random)
+	Change in hand (up or down depending on error)
+	Set for no errors. Display action based on error avoided
+5. Repeat until all cards played
+6. Display final menu option
+7. "You win/lose!" 
+	Add rule if won
+8. Play again?
+9. Reset if yes
