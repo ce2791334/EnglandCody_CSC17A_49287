@@ -1,0 +1,353 @@
+/* 
+ * File:   main.cpp
+ * Author: Cody England
+ * Created on October 25, 2020, 5:31 PM
+ * Purpose: Game of Mao
+ * Version: 15 - Final version. Cleanup and remove display of AI hand
+ */
+
+//System libraries
+//I/O Library
+//Format Library
+//Random Function Library
+//Time Library to Set Seed
+//String library
+//File library
+using namespace std;
+//User Libraries
+//Bring in "Cards" structure      
+//Global Constants
+//Only Universal Physics/Math/Conversions found here
+//No Global Variables
+//Higher Dimension arrays requiring definition prior to prototype only.
+// - None
+
+//Function Prototypes
+//Create the deck
+
+//Deal Player 1 hand 
+//Deal AI hand
+//Create discard pile
+//Recreate deck with cards left 
+  //after dealing
+//Print hand
+//Start game by showing 
+//the top card off deck
+//Delete allocated memory
+/Write the hands to files
+//Play a card
+//AI's turn to play
+/Swap cards to adjust for plays
+//Execute if card played follows rules 
+//Execute if card played doesn't follow rules
+ 
+//This fxn will execute each turn
+  //This fxn will execute tests 
+    //in between turns to simplify 
+    //gmePlay fxn
+  //"Flip over" the discard pile
+ //Mao specific fxn to choose number based 
+    //on card played
+//Test that game rules are followed
+
+
+//Execution Begins Here
+
+//Set random number seed here when needed
+//Declare variables or constants here
+//7 characters or less
+		//This variable could be removed
+		//but leaving it here allows for easy
+        //adjustment of starting hand size if
+        //desired
+        //File to hold Player 1's hand
+        //File to hold AI player's hand
+        //Just used to start the game
+    //Start game
+    //Print Welcome message
+    //Initialize or input data here 
+    //Create the deck before dealing
+           ////Create memory 1
+    //Deal hands
+           ////Create memory 2
+           ////Create memory 3
+    //Create the deck that will be used throughout the game
+            ////Create memory 5
+    //Create the discard pile
+             ////Create memory 4
+    
+    //Begin game play
+   
+    //Delete allocated memory
+                 ////Delete memory 1
+                ////Delete memory 2
+               ////Delete memory 4
+              ///Delete memory 5
+    //Exit Stage Right
+    
+
+//Begin fxn to create the rest of the deck
+
+    //Declare variables
+    //Flag variable to check for duplicate
+    //cards
+    //Allocate memory for the deck after dealing the hands
+       //Largest number of cards
+       //there could be
+    //Initialize size of deck
+    deck->hand->hdSz = Deck;
+    //Loop to assign initial hand
+  
+    //Create a unique random card off the top of deck
+    //I chose this method of randomly assigning the cards in the deck 
+    //removes the need to shuffle, but may cause program to take longer
+    //to run as the loop goes until all cards are unique
+     
+            //Check if card is a duplicate of one already in deck
+       
+
+//Begin function to deal P1 hand
+
+    //Allocate memory for a new Player 1 hand
+       //Largest number of cards
+       //there could be
+    //Initialize starting hand size
+    //Loop to assign initial hand
+   
+        //Multiply position in deck by 2 to simulate even 
+        //dealing between players
+     
+     //Write hand contents to a binary file
+  
+    //Adjust size of deck to account for dealt cards
+  
+
+//Begin function to deal AI hand
+
+    //Allocate memory for a new Player 1 hand
+        //Largest number of cards
+        //there could bec(52)
+    //Initialize starting hand size
+
+    //Loop to assign initial hand
+    
+        //Multiply position in deck by 2 to simulate even 
+        //dealing between players
+      
+    //Write hand contents to a binary file
+ 
+    //Adjust size of deck to account for dealt cards
+   
+
+//Begin fxn to write the starting hands to files
+
+    //Open file
+    //Write card to file
+  
+    //close file
+ 
+//Begin fxn to recreate deck that holds remaining cards after dealing
+
+    //Allocate memory for a discard pile
+      //Largest number of cards
+                                     //there could be
+  
+    //Initialize the size of the new deck
+  
+   //For loop to assign remaining cards in original deck to the new one
+   
+    //Delete original deck
+
+//Begin fxn to create dynamic discard pile
+
+    //Allocate memory for a discard pile
+       //Largest number of cards
+                                                  //there could be
+    //First card in discard pile will be the top card off the deck
+    //Initialize size of discard pile to 1
+    //Print the top card
+    //Decrement deck size to account for displayed card
+ 
+
+//Begin function to display the hand
+
+    //Declare fxn variable
+	//height of card
+    //Open file to get hand from
+   
+    //Reset first card to proper value
+    //Display top edge of cards
+    
+    //Display card number/suit
+ 
+        //I want to show the number 10
+       
+      //Close file
+   
+    //This if statement prevents a display when there are no cards 
+    //left in hand
+   
+    //Display sides of cards
+   
+    //Display bottom edge of cards
+   
+
+//Begin fxn to print the top card of discard pile
+
+    //Declare fxn variables
+            //height of card
+           //To test for card value of 1
+    
+    //Display "deck"
+      
+    //Loop to display centers of top of next card in deck
+    //and the face of the card shown
+ 
+            //Make sure to display '10' rather than 'T'
+     
+//Begin fxn to delete allocated memory
+
+           ///////Delete memory 1
+           /////Delete memory 2
+
+
+//Begin fxn to play a card
+
+    //Declare fxn variables
+     //Will hold input value of card user plays
+     //Boolean value to check that card played is valid
+     //Will hold the position of the card played
+     //This variable will hold either 1 or 2 depending
+         //on whether play followed all rules
+    //Enter do while loop to ask player for a card as long as they enter an
+    //invalid card
+
+        //Ask player to enter the card they want to play
+
+        //Loop to check that card played is one from hand
+    
+           //If card isn't in the player's hand
+     
+    //Checck that play followed rules. If not then penalize with 
+    //additional card
+    
+    //If 2 then ggod play and proceed normally
+     //Execute a good play procedure
+      
+     //Execute a bad play procedure
+        
+    //Write the new hand to file
+    
+    //Conditional return value of good or bad play
+   
+//Begin fxn to display the card played by the AI
+
+    //Declare fxn variables
+         //Check if AI has a playable card
+         //index to check AI hand for playable card
+    //Enter while loop to only play valid card for AI if possible
+  
+    //If valid card found then execute a good play procedure
+  
+    //Write the new hand to file
+   
+    //Conditional return value of good or bad play
+   
+
+//Begin swap fxn to adjust hand for card plays
+
+
+//Begin fxn to execute each turn in the game
+
+    //Declare fxn variables
+							//Counter representing each turn
+							//This will be use to test if play 
+                            //was good or bad
+    //Print initial hands
+    prntCds(P1File, P1);
+    //Enter do while loop to continue turns until 1 player plays all 
+    //cards.  Increment turn counter after each play 
+    //(so technically counter represents a half turn)
+  
+        //Play a card
+        //Test results of Player 1's turn
+        //AI's turn
+         //Test results of AI's turn
+        //Print hand after turn
+  
+
+ //Begin fxn to test if game rules are followed during a play
+
+                       //and '1' if any rule is broken
+    //Independent if statements to check each rule of play
+    //Rule 1: Cards played must be of either same suit or face value
+  
+    //Rule 2: if an ace is played then '1' must be entered
+ 
+    //Rule 3: If the suit of top card on discard pile is changed then
+    //a '2' must be entered
+   
+    //Rule 4: If a short run occurs (any 2 values in a row in 
+    //increasing order) than a '3' must be entered
+   
+        //Fulfilled all rules!
+  
+
+ //Begin fxn that executes if card played follows rules
+      
+    //Assign played card to discard pile
+
+    //remove the card played from player's hand
+
+    //Decrement hand size
+  
+
+//Begin fxn that executes if card played doesn't follow rules
+
+    //If bad play then penalize by adding a card to player's hand
+    //Give card from bottom of deck. Not realistic but 
+    //simplest implementation
+    
+    //Increment hand size to account for penalization card 
+    //which means decrementing the deck
+
+
+//Begin fxn to execute tests in between turns
+
+    //Control the turn counter to control top card of discard pile 
+    //that's compared to
+
+    //Check if deck is empty b/c then discard pile will be flipped over   
+
+
+//Begin fxn to "flip over" the discard pile
+
+//For loop to assign all discard cards back into deck
+  
+    //Reset turn counter now that discard pile has been flipped over
+ 
+
+//Begin fxn to display menu for Player to choose a number 
+//to satisfy condition
+
+    //Declare fxn variables
+
+    //Ask Player to choose a number
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
